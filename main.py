@@ -11,13 +11,14 @@ import logging
 import warnings
 warnings.filterwarnings("ignore", message="Tried to instantiate class '__path__._path'")
 
-# Load environment variables
-load_dotenv()
+# # Load environment variables
+# load_dotenv()
 
 # Initialize Gemini API
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+# Access the API key from Streamlit Secrets
+GEMINI_API_KEY = st.secrets["GEMINI_API_KEY"]
 if not GEMINI_API_KEY:
-    st.error("Gemini API key is missing. Please set it in the .env file.")
+    st.error("Gemini API key is missing. Please set it in the Streamlit Cloud secrets.")
     st.stop()
 
 llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", api_key=GEMINI_API_KEY, temperature=1)
