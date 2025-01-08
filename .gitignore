@@ -1,0 +1,39 @@
+# .gitignore
+# Python files
+*.py[cod]
+__pycache__/
+*.so
+
+# Environment files
+.venv/
+venv/
+*.env
+
+# Streamlit specific
+.streamlit/
+
+# Logs
+logs/
+*.log
+
+debug.log
+
+# Byte-compiled / optimized / compiled files
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# macOS files
+.DS_Store
+
+# Others
+*.sqlite3
+*.db
+.idea/
+*.iml
+*.bakcl
+
+#folder
+models/
